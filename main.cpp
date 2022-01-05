@@ -18,23 +18,24 @@ double wyniki;
 int main()
 {
     cout << "Kalkulator \n\n" << endl;
-    cin >> liczba1 >>znak_operator >> liczba2;
+    cin >> liczba1 >>znak_operator >> liczba2 >> znak_operator >> liczba3 >> znak_operator >> liczba4;
+
     if(znak_operator =='+')
     {
-        wyniki = liczba1 + liczba2 + liczba3 + liczba4 + liczba5 + liczba6 + liczba7 + liczba8;
-        cout << "Wynik"<< wyniki<<endl
+        wyniki = liczba1 + liczba2 + liczba3 + liczba4;
+        cout << "Wynik:"<< wyniki<<endl
                                 <<endl;
     }
     else if(znak_operator == '-')
     {
-        wyniki = liczba1 - liczba2 - liczba3 - liczba4 - liczba5 - liczba6 - liczba7 - liczba8;
-        cout << "Wynik"<< wyniki<<endl
+        wyniki = liczba1 - liczba2 - liczba3 - liczba4;
+        cout << "Wynik:"<< wyniki<<endl
                                 <<endl;
     }
     else if(znak_operator == '*')
     {
-        wyniki = liczba1 * liczba2 * liczba3 * liczba4 * liczba5 * liczba6 * liczba7 * liczba8;
-        cout << "Wynik"<< wyniki<<endl
+        wyniki = liczba1 * liczba2 * liczba3 * liczba4;
+        cout << "Wynik:"<< wyniki<<endl
                                 <<endl;
     }
     else if(znak_operator == '/')
@@ -44,12 +45,13 @@ int main()
             cout << "nie mozna dzielic przez zero"<<endl;
             return 0;
         }
-        wyniki = liczba1 / liczba2 / liczba3 / liczba4 / liczba5 / liczba6 / liczba7 / liczba8;
-        cout << "Wynik"<< wyniki<<endl
+        wyniki = liczba1 / liczba2 / liczba3 / liczba4;
+        cout << "Wynik:"<< wyniki<<endl
                                 <<endl;
     }
     
 
+    system("pause");
      return 0;
 }
 
