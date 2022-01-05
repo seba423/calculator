@@ -11,6 +11,11 @@ double wyniki;
 
 int main()
 {
+while(true)
+{
+    
+
+    
     cout << "Kalkulator \n\n" << endl;
     cin >> liczba1 >>znak_operator >> liczba2;
 
@@ -44,8 +49,9 @@ int main()
                                 <<endl;
     }
     
-
+}
      return 0;
+     
 }
 
 
