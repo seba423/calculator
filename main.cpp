@@ -87,6 +87,14 @@ int main()
     cout<<"Po zaokragleniu do dwoch miejsc po przecinku: "<<
 	setprecision(2)<<fixed<<sqrt(a)<<endl;
     }
+    else if (dzialanie == "pierwiastek_szescienny")
+    {
+        double liczba;
+        cout << "Podaj liczbe: ";
+        cin >> liczba;
+        double wynik = pow( liczba,( 1 / 3.0 ) ); 
+        cout << "Pierwiastek stopnia trzeciego z liczby " << liczba << " to: " << wynik << endl;
+    }
     }
     system("pause");
      return 0;
