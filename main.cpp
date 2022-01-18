@@ -1,7 +1,10 @@
+#include<iomanip>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 //zmienne
+string dzialanie;
 double liczba1;
 double liczba2;
 char znak_operator;
@@ -11,49 +14,81 @@ double wyniki;
 
 int main()
 {
-while(true)
-{
-    
-
-    
     cout << "Kalkulator \n\n" << endl;
-    cin >> liczba1 >>znak_operator >> liczba2;
+    while (true)
+    {
+    cout << "wpisz jakie dzialanie chcesz wykonac" << endl;
+    cin >> dzialanie;
 
-    if(znak_operator =='+')
+    if(dzialanie == "potegi")
     {
-        wyniki = liczba1 + liczba2;
-        cout << "Wynik:"<< wyniki<<endl
-                                <<endl;
+    double liczba, potega;
+    cout << "Podaj liczbe: ";
+    cin >> liczba;
+    cout << "Do ktorej potęgi podniesc liczbe " << liczba << "? Wpisz wartosc: ";
+    cin >> potega;
+    cout << "pow(" << liczba << "," << potega << ")=" << pow( liczba, potega ) << endl;   
     }
-    else if(znak_operator == '-')
+    else if (dzialanie == "dodawanie")
     {
-        wyniki = liczba1 - liczba2;
-        cout << "Wynik:"<< wyniki<<endl
-                                <<endl;
+     double liczba1;
+     double liczba2;
+     double wynik;
+     cout << "podaj 1 liczbe" <<endl;
+     cin >> liczba1;
+     cout << "podaj 2 liczbe" <<endl;
+     cin >> liczba2;
+     wynik = liczba1 + liczba2;
+     cout << wynik << endl;
     }
-    else if(znak_operator == '*')
+    else if (dzialanie == "odejmowanie")
     {
-        wyniki = liczba1 * liczba2;
-        cout << "Wynik:"<< wyniki<<endl
-                                <<endl;
+     double liczba1;
+     double liczba2;
+     double wynik;
+     cout << "podaj 1 liczbe" <<endl;
+     cin >> liczba1;
+     cout << "podaj 2 liczbe" <<endl;
+     cin >> liczba2;
+     wynik = liczba1 - liczba2;
+    cout <<wynik<<endl;
     }
-    else if(znak_operator == '/')
+     else if (dzialanie == "mnozenie")
     {
-        if (liczba1 == 0)
-        {
-            cout << "nie mozna dzielic przez zero"<<endl;
-            return 0;
-        }
-        wyniki = liczba1 / liczba2;
-        cout << "Wynik:"<< wyniki<<endl
-                                <<endl;
+     double liczba1;
+     double liczba2;
+     double wynik;
+     cout << "podaj 1 liczbe" <<endl;
+     cin >> liczba1;
+     cout << "podaj 2 liczbe" <<endl;
+     cin >> liczba2;
+     wynik = liczba1 * liczba2;
+    cout <<wynik<<endl;
     }
-    
-}
+     else if (dzialanie == "dzielenie")
+    {
+     double liczba1;
+     double liczba2;
+     double wynik;
+     cout << "podaj 1 liczbe" <<endl;
+     cin >> liczba1;
+     cout << "podaj 2 liczbe" <<endl;
+     cin >> liczba2;
+     wynik = liczba1 / liczba2;
+    cout <<wynik<<endl;
+    }
+    else if (dzialanie == "pierwiastek")
+    {
+    cout << "Ta funkcja liczy pierwiastek drugiego stopnia"<<endl;    
+    double a;
+    cout << "podaj liczbe"<<endl;
+    cin >> a;    
+    cout<<"Pierwiastek z liczby "<<a<<" wynosi: "<<sqrt(a)<<endl;
+    cout<<"Po zaokragleniu do dwoch miejsc po przecinku: "<<
+	setprecision(2)<<fixed<<sqrt(a)<<endl;
+    }
+    }
+    system("pause");
      return 0;
      
 }
-
-
-
-
