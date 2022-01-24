@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     cout << "Kalkulator \n\n" << endl;
-    cout << "+ dodawanie  , - odejmowanie, * mno\276enie , / dzielenie ,^ pot\251gowanie , V pierwiastek drugiego stopnia(kwadratowy), V3 pierwiastek trzeciego stopnia sze\230cienny" << endl;
+    cout << "+ dodawanie  , - odejmowanie, * mno\276enie , / dzielenie ,^ pot\251gowanie , V pierwiastek drugiego stopnia(kwadratowy), @ pierwiastek trzeciego stopnia sze\230cienny" << endl;
     while(true)
     {
 
@@ -33,7 +33,7 @@ int main()
      cout << "podaj 2 liczb\251" <<endl;
      cin >> liczba2;
      wynik = liczba1 + liczba2;
-     cout << wynik << endl;    
+     cout<<"Wynik:" << wynik << endl;    
     }
     else if(znak == '-')
     {
@@ -45,7 +45,7 @@ int main()
      cout << "podaj 2 liczb\251" <<endl;
      cin >> liczba2;
      wynik = liczba1 - liczba2;
-    cout <<wynik<<endl;   
+    cout<<"Wynik:" <<wynik<<endl;   
     }
     else if(znak == '/')
     {
@@ -57,7 +57,7 @@ int main()
      cout << "podaj 2 liczb\251" <<endl;
      cin >> liczba2;
      wynik = liczba1 / liczba2;
-     cout <<wynik<<endl;   
+     cout<<"Wynik:" <<wynik<<endl;   
     }
     else if(znak == '*')
     {
@@ -66,10 +66,10 @@ int main()
      double wynik;
      cout << "podaj 1 liczb\251" <<endl;
      cin >> liczba1;
-     cout << "podaj 2 liczbe" <<endl;
+     cout << "podaj 2 liczb\251" <<endl;
      cin >> liczba2;
      wynik = liczba1 * liczba2;
-     cout <<wynik<<endl;    
+     cout<<"Wynik:" <<wynik<<endl;    
     }
     else if(znak == 'V')
     {  
@@ -80,7 +80,7 @@ int main()
     cout<<"Po zaokr\245gleniu do dw\242ch miejsc po przecinku: "<<
 	setprecision(2)<<fixed<<sqrt(a)<<endl;    
     }
-    else if(znak == 'V3')
+    else if(znak == '@')
     {
         double liczba;
         cout << "Podaj liczb\251: ";
@@ -91,4 +91,4 @@ int main()
     }
     system("pause");
     return 0;
-}
+} 
