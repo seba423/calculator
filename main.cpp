@@ -2,26 +2,24 @@
 #include <math.h>
 #include <iomanip>
 #include <stdlib.h>
-char znak;
+
 using namespace std;
-
-
+char znak;
+int i = 1;
 int main()
 {
-    cout << "Kalkulator \n\n" << endl;
-    
-    while(true)
+    cout << "+ dodawanie  , - odejmowanie, * mnozenie , / dzielenie ,^ potegowanie , V pierwiastek drugiego stopnia(kwadratowy), @ pierwiastek trzeciego stopnia szescienny lub czyszczenie ekranu za pomoca znaku !" << endl;
+    while(i = 1)
     {
-
-    cout << "+ dodawanie  , - odejmowanie, * mno\276enie , / dzielenie ,^ pot\251gowanie , V pierwiastek drugiego stopnia(kwadratowy), @ pierwiastek trzeciego stopnia sze\230cienny lub czyszczenie ekranu za pomoc\245 znaku !" << endl;
-    cout << "Podaj znak dzia\210ania jakie chesz wykona\206" << endl;
+    start:
+    cout << "Podaj znak dzialania jakie chesz wykonac" << endl;
     cin >> znak;
     if(znak =='^')
     {
      double liczba, potega;
-    cout << "Podaj liczb\251: ";
+    cout << "Podaj liczbe: ";
     cin >> liczba;
-    cout << "Do kt\242rej pot\251gi podnie\230\206 liczb\251 " << liczba << "? Wpisz warto\230\206: ";
+    cout << "Do ktorej potegi podniesc liczbe " << liczba << "? Wpisz wartosc: ";
     cin >> potega;
     cout << "pow(" << liczba << "," << potega << ")=" << pow( liczba, potega ) << endl;       
     }
@@ -30,9 +28,9 @@ int main()
       double liczba1;
      double liczba2;
      double wynik;
-     cout << "podaj 1 liczb\251" <<endl;
+     cout << "podaj 1 liczbe" <<endl;
      cin >> liczba1;
-     cout << "podaj 2 liczb\251" <<endl;
+     cout << "podaj 2 liczbe" <<endl;
      cin >> liczba2;
      wynik = liczba1 + liczba2;
      cout<<"Wynik:" << wynik << endl;    
@@ -42,9 +40,9 @@ int main()
       double liczba1;
      double liczba2;
      double wynik;
-     cout << "podaj 1 liczb\251" <<endl;
+     cout << "podaj 1 liczbe" <<endl;
      cin >> liczba1;
-     cout << "podaj 2 liczb\251" <<endl;
+     cout << "podaj 2 liczbe" <<endl;
      cin >> liczba2;
      wynik = liczba1 - liczba2;
     cout<<"Wynik:" <<wynik<<endl;   
@@ -54,9 +52,9 @@ int main()
        double liczba1;
      double liczba2;
      double wynik;
-     cout << "podaj 1 liczb\251" <<endl;
+     cout << "podaj 1 liczbe" <<endl;
      cin >> liczba1;
-     cout << "podaj 2 liczb\251" <<endl;
+     cout << "podaj 2 liczbe" <<endl;
      cin >> liczba2;
      wynik = liczba1 / liczba2;
      cout<<"Wynik:" <<wynik<<endl;   
@@ -66,9 +64,9 @@ int main()
      double liczba1;
      double liczba2;
      double wynik;
-     cout << "podaj 1 liczb\251" <<endl;
+     cout << "podaj 1 liczbe" <<endl;
      cin >> liczba1;
-     cout << "podaj 2 liczb\251" <<endl;
+     cout << "podaj 2 liczbe" <<endl;
      cin >> liczba2;
      wynik = liczba1 * liczba2;
      cout<<"Wynik:" <<wynik<<endl;    
@@ -76,16 +74,16 @@ int main()
     else if(znak == 'V')
     {  
     double a;
-    cout << "podaj liczb\251"<<endl;
+    cout << "podaj liczbe"<<endl;
     cin >> a;    
     cout<<"Pierwiastek z liczby "<<a<<" wynosi: "<<sqrt(a)<<endl;
-    cout<<"Po zaokr\245gleniu do dw\242ch miejsc po przecinku: "<<
+    cout<<"Po zaokragleniu do dwoch miejsc po przecinku: "<<
 	setprecision(2)<<fixed<<sqrt(a)<<endl;    
     }
     else if(znak == '@')
     {
         double liczba;
-        cout << "Podaj liczb\251: ";
+        cout << "Podaj liczbe: ";
         cin >> liczba;
         double wynik = pow( liczba,( 1 / 3.0 ) ); 
         cout << "Pierwiastek stopnia trzeciego z liczby " << liczba << " to: " << wynik << endl;    
@@ -94,7 +92,23 @@ int main()
     {
       system("CLS");
     }
+
+
+
+
+    cout << "jesli chcesz kontynuowac wpisz 1 jesli nie 0 " << endl;
+    cin >> i;
+
+
+switch(i) {
+  case 1:
+  goto start;
+    break;
+  case 0:
+  goto abc;
+    break;
     }
-    system("pause");
+    }
+    abc:
     return 0;
-} 
+}
