@@ -1,114 +1,111 @@
-#include <iostream>
-#include <math.h>
 #include <iomanip>
 #include <stdlib.h>
-
+#include <iostream>
+#include <math.h>
+#include <conio.h>
 using namespace std;
-char znak;
-int i = 1;
+void potegowanie()
+{
+long a,b;
+cout << "podaj 1 liczbe" <<endl;
+cin >> a;
+cout << "podaj 2 liczbe" <<endl;
+cin >> b;
+cout << "wynik:"<< pow(a,b) <<endl;
+}
+void dzielenie()
+{
+double a,b,c;
+cout << "podaj 1 liczbe" <<endl; 
+cin >> a;
+cout << "podaj 2 liczbe" <<endl;
+cin >> b;
+if(a ==0 or b ==0)cout << "nie dzielimy przez zero" <<endl;
+else cout << "wynik:"<<a/b<<endl;
+}
+void mnozenie()
+{
+double a,b,c;
+cout << "podaj 1 liczbe" <<endl; 
+cin >> a;
+cout << "podaj 2 liczbe" <<endl;
+cin >> b;
+c = a * b;
+cout <<  c <<endl;
+}
+void odejmowanie()
+{
+double a,b,c;
+cout << "podaj 1 liczbe" <<endl; 
+cin >> a;
+cout << "podaj 2 liczbe" <<endl;
+cin >> b;
+c = a - b;
+cout <<  c <<endl;
+}
+void dodawanie()
+{
+double a,b,c;
+cout << "podaj 1 liczbe" <<endl; 
+cin >> a;
+cout << "podaj 2 liczbe" <<endl;
+cin >> b;
+c = a + b;
+cout <<  c <<endl;
+
+}
 int main()
 {
-    cout << "+ dodawanie  , - odejmowanie, * mnozenie , / dzielenie ,^ potegowanie , V pierwiastek drugiego stopnia(kwadratowy), @ pierwiastek trzeciego stopnia szescienny lub czyszczenie ekranu za pomoca znaku !" << endl;
-    while(i = 1)
+  int i = 1;
+  char funkcja;
+  while(i = 1)
+  {
+  start:  
+  cout <<"wpisz numer dzialania: 1 to dodawanie. 2 to odejmowanie,3 to monzenie, 4 to dzielenie , 5 to potegowanie" <<endl;
+  funkcja=getch();
+  switch( funkcja)
+  {
+    case '1':
     {
-    start:
-    cout << "Podaj znak dzialania jakie chesz wykonac" << endl;
-    cin >> znak;
-    if(znak =='^')
+      dodawanie();
+      break;
+    }
+    case '2':
     {
-     double liczba, potega;
-    cout << "Podaj liczbe: ";
-    cin >> liczba;
-    cout << "Do ktorej potegi podniesc liczbe " << liczba << "? Wpisz wartosc: ";
-    cin >> potega;
-    cout << "pow(" << liczba << "," << potega << ")=" << pow( liczba, potega ) << endl;       
+      odejmowanie();
+      break;
     }
-    else if(znak == '+')
+    case '3':
     {
-      double liczba1;
-     double liczba2;
-     double wynik;
-     cout << "podaj 1 liczbe" <<endl;
-     cin >> liczba1;
-     cout << "podaj 2 liczbe" <<endl;
-     cin >> liczba2;
-     wynik = liczba1 + liczba2;
-     cout<<"Wynik:" << wynik << endl;    
+      mnozenie();
+      break;
     }
-    else if(znak == '-')
+    case '4':
     {
-      double liczba1;
-     double liczba2;
-     double wynik;
-     cout << "podaj 1 liczbe" <<endl;
-     cin >> liczba1;
-     cout << "podaj 2 liczbe" <<endl;
-     cin >> liczba2;
-     wynik = liczba1 - liczba2;
-    cout<<"Wynik:" <<wynik<<endl;   
+      dzielenie();
+      break;
     }
-    else if(znak == '/')
+    case '5':
     {
-       double liczba1;
-     double liczba2;
-     double wynik;
-     cout << "podaj 1 liczbe" <<endl;
-     cin >> liczba1;
-     cout << "podaj 2 liczbe" <<endl;
-     cin >> liczba2;
-     wynik = liczba1 / liczba2;
-     cout<<"Wynik:" <<wynik<<endl;   
+      potegowanie();
+      break;
     }
-    else if(znak == '*')
+    default:
     {
-     double liczba1;
-     double liczba2;
-     double wynik;
-     cout << "podaj 1 liczbe" <<endl;
-     cin >> liczba1;
-     cout << "podaj 2 liczbe" <<endl;
-     cin >> liczba2;
-     wynik = liczba1 * liczba2;
-     cout<<"Wynik:" <<wynik<<endl;    
+      cout << "nie ma takiej opcji"<<endl;
+      getchar();
+      exit(0);
     }
-    else if(znak == 'V')
-    {  
-    double a;
-    cout << "podaj liczbe"<<endl;
-    cin >> a;    
-    cout<<"Pierwiastek z liczby "<<a<<" wynosi: "<<sqrt(a)<<endl;
-    cout<<"Po zaokragleniu do dwoch miejsc po przecinku: "<<
-	setprecision(2)<<fixed<<sqrt(a)<<endl;    
-    }
-    else if(znak == '@')
-    {
-        double liczba;
-        cout << "Podaj liczbe: ";
-        cin >> liczba;
-        double wynik = pow( liczba,( 1 / 3.0 ) ); 
-        cout << "Pierwiastek stopnia trzeciego z liczby " << liczba << " to: " << wynik << endl;    
-    }
-    else if(znak == '!')
-    {
-      system("CLS");
-    }
-
-
-
-
-    cout << "jesli chcesz kontynuowac wpisz 1 jesli nie 0 " << endl;
-    cin >> i;
-
-
-switch(i) {
-  case 1:
-  goto start;
+  }
+  cout<< "czy chcesz kontynuowac wpisz 1 jesli nie 0"<<endl;
+  cin >> i;
+  if(i == 0)
+  {
     break;
-  case 0:
-  goto abc;
-    break;
-    }
-    }
-    abc:
-    return 0;
-}
+  }
+ 
+  
+
+  }
+  return 0;
+} 
